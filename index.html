@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-PT">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,26 +11,22 @@
         <h1>Listaça ToDo</h1>
     </header>
     <main>
-        <form action="">
-            <label for="">✏️</label>
-            <input type="text" placeholder="Escreva aqui a sua tarefa">
-            <button>Adicionar</button>
+        <form id="form-tarefa">
+            <label>✏️</label>
+            <input id="input-tarefa" type="text" placeholder="Escreva aqui a sua tarefa">
+            <button type="submit">Adicionar</button>
+        </form>
+
         <section>
             <h2>Em processo</h2>
-            <ul id="lista-processo">
-                <li>
-                    Tarefa exemplo
-                    <button>Finalizar</button>
-                    <button>Eliminar</button>
-                </li>
-            </ul>
+            <ul id="lista-processo"></ul>
         </section>
 
         <section>
             <h2>Finalizadas</h2>
             <ul id="lista-finalizadas">
                 <li>
-                    Tarefa concluída
+                    Tarefa concluída ex
                     <button>Renovar</button>
                     <button>Eliminar</button>
                 </li>
