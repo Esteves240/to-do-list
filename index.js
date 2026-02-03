@@ -1,6 +1,7 @@
 const form = document.getElementById('form-tarefa'); 
 const input = document.getElementById('input-tarefa'); 
 const listaProcess = document.getElementById('lista-processo'); 
+//const listaFinal = document.getElementById('lista-finalizadas')
 
 
 form.addEventListener('submit', function (event) {
