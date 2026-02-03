@@ -1,7 +1,7 @@
 const form = document.getElementById('form-tarefa'); 
 const input = document.getElementById('input-tarefa'); 
 const listaProcess = document.getElementById('lista-processo'); 
-//const listaFinal = document.getElementById('lista-finalizadas')
+const listaFinal = document.getElementById('lista-finalizadas')
 
 
 form.addEventListener('submit', function (event) {
@@ -15,6 +15,7 @@ form.addEventListener('submit', function (event) {
     const novoListItem = document.createElement('li');
     novoListItem.textContent = texto;
 
+    
     // criar botão eliminar
     const novoButton = document.createElement('button');
     novoButton.textContent = 'Eliminar';
@@ -23,13 +24,23 @@ form.addEventListener('submit', function (event) {
         novoListItem.remove();
     });
 
+
+    // criar botão finalizar
+    const novoButFinal = document.createElement('button');
+    novoButFinal.textContent = 'Finalizar';
+    // ação do botão
+    novoButFinal.addEventListener('click', function () {
+    listaFinal.appendChild(novoListItem);
+    });
+
     // juntar botão ao li
     novoListItem.appendChild(novoButton);
+    novoListItem.appendChild(novoButFinal);
 
     // juntar li à lista(ul)
     listaProcess.appendChild(novoListItem);
+    
 
     // limpar input
     input.value = '';
 });
-
