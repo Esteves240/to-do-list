@@ -8,7 +8,6 @@ form.addEventListener('submit', function (event) {
     event.preventDefault(); // impede reload
 
     const texto = input.value;
-
     if (texto === '') return;
 
     // criar li
@@ -32,6 +31,15 @@ form.addEventListener('submit', function (event) {
     novoButFinalizado.addEventListener('click', function () {
     listaFinal.appendChild(novoListItem);
     });
+
+
+    //apagar botão finalizar e mover tarefa
+    novoButFinalizado.addEventListener("click", () => finalizarTarefa(novoListItem, novoButFinalizado));
+    function finalizarTarefa(li, btn) {
+        btn.remove();
+        listaFinal.appendChild(li);
+    }
+
 
     // juntar botão ao li
     novoListItem.appendChild(novoButton);
