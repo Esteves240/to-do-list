@@ -26,16 +26,16 @@ form.addEventListener('submit', function (event) {
 
 
     // criar botão finalizar
-    const novoButFinal = document.createElement('button');
-    novoButFinal.textContent = 'Finalizar';
+    const novoButFinalizado = document.createElement('button');
+    novoButFinalizado.textContent = 'Finalizar';
     // ação do botão
-    novoButFinal.addEventListener('click', function () {
+    novoButFinalizado.addEventListener('click', function () {
     listaFinal.appendChild(novoListItem);
     });
 
     // juntar botão ao li
     novoListItem.appendChild(novoButton);
-    novoListItem.appendChild(novoButFinal);
+    novoListItem.appendChild(novoButFinalizado);
 
     // juntar li à lista(ul)
     listaProcess.appendChild(novoListItem);
