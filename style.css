@@ -1,3 +1,11 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, sans-serif;
+}
+
 /* CORES */
 :root {
     --bg: #0f1115;
@@ -81,19 +89,30 @@ ul {
     gap: 0.5rem;
 }
 
-/* LI */
+
+
+/* li */
 li {
     background: #222633;
     padding: 0.75rem 1rem;
     border-radius: 8px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    gap: 0.5rem;
+}
+
+/* empurra os botões para a direita */
+li button:first-of-type {
+    margin-left: auto;
+}
+
+/* cola os botões entre si */
+li button + button {
+    margin-left: 4px;
 }
 
 /* BOTÕES */
 li button {
+    margin-right: 4px;
     background: transparent;
     border: 1px solid;
     padding: 0.25rem 0.6rem;
