@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, sans-serif;
+}
+
+/* CORES */
+:root {
+    --bg: #14150f;
+    --card: #181b22;
+    --text: #e6e6eb;
+    --muted: #9aa0a6;
+    --green: #22c55e;
+    --red: #ef4444;
+}
+
+/* BODY */
+body {
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+}
+
+/* MAIN */
+main {
+    width: 100%;
+    max-width: 900px;
+    padding: 2rem 1.5rem;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* FORM CENTRADO */
+form {
+    max-width: 500px;
+    margin: 0 auto 3rem;
+    display: flex;
+    gap: 0.5rem;
+    background: var(--card);
+    padding: 1rem;
+    border-radius: 12px;
+}
+
+form input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: var(--text);
+    outline: none;
+}
+
+form input::placeholder {
+    color: var(--muted);
+}
+
+/* LISTAS EM DUAS COLUNAS */
+.listas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+/* COLUNA */
+.coluna {
+    background: var(--card);
+    padding: 1rem;
+    border-radius: 12px;
+}
+
+.coluna h2 {
+    font-size: 1rem;
+    color: var(--muted);
+    margin-bottom: 0.75rem;
+}
+
+/* UL */
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+
+
+/* li */
+li {
+    background: #222633;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+}
+
+
+/* empurra os botões para a direita */
+li button:first-of-type {
+    margin-left: auto;
+}
+/* cola os botões entre si */
+li button + button {
+    margin-left: 4px;
+}
+
+
+/* BOTÕES */
+li button {
+    margin-right: 4px;
+    background: transparent;
+    border: 1px solid;
+    padding: 0.25rem 0.6rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+/* FINALIZAR */
+li button:last-child {
+    border-color: var(--green);
+    color: var(--green);
+}
+
+li button:last-child:hover {
+    background: var(--green);
+    color: #0f1115;
+}
+
+/* ELIMINAR */
+li button:first-child {
+    border-color: var(--red);
+    color: var(--red);
+}
+
+li button:first-child:hover {
+    background: var(--red);
+    color: white;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 700px) {
+    .listas {
+        grid-template-columns: 1fr;
+    }
+}
