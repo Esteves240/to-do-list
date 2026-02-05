@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>To Do List</title>
     <script src="index.js" defer></script>
 </head>
@@ -17,15 +18,17 @@
             <button type="submit">Adicionar</button>
         </form>
 
-        <section>
-            <h2>Em processo</h2>
-            <ul id="lista-processo"></ul>
-        </section>
+        <div class="listas">
+            <section class="coluna processo">
+                <h2>Em processo</h2>
+                <ul id="lista-processo"></ul>
+            </section>
 
-        <section>
-            <h2>Finalizadas</h2>
-            <ul id="lista-finalizadas"></ul>
-        </section>
+            <section class="coluna finalizadas">
+                <h2>Finalizadas</h2>
+                <ul id="lista-finalizadas"></ul>
+            </section>
+        </div>
 
     </main>
 </body>
